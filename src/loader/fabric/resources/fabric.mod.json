@@ -1,0 +1,33 @@
+{
+	"schemaVersion": 1,
+	"id": "reticle",
+	"version": "${version}",
+	"name": "Reticle",
+	"description": "A fighter-jet style heads-up display for elytra flight: flight instruments, a flight-path marker, and line-of-sight target boxes on nearby entities. Client-side only.",
+	"authors": [
+		"comedy01"
+	],
+	"license": "MIT",
+	"contact": {
+		"homepage": "https://github.com/comedy01/Reticle",
+		"sources": "https://github.com/comedy01/Reticle",
+		"issues": "https://github.com/comedy01/Reticle/issues"
+	},
+	"environment": "client",
+	"entrypoints": {
+		"client": [
+			"dev.reticle.fabric.ReticleFabric"
+		],
+		"modmenu": [
+			"dev.reticle.fabric.ReticleModMenu"
+		]
+	},
+	"depends": {
+		"fabricloader": ">=0.19.3",
+		"minecraft": "${range}",
+		"java": ">=${java_version}"
+	},
+	"suggests": {
+		"modmenu": "*"
+	}
+}

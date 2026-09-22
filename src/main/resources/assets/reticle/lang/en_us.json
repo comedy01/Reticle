@@ -1,0 +1,20 @@
+{
+  "reticle.options.title": "Reticle",
+  "reticle.options.enabled": "Enabled",
+  "reticle.options.enabled.tooltip": "Show the flight HUD while gliding with an elytra.",
+  "reticle.options.instruments": "Flight Instruments",
+  "reticle.options.flight_path_marker": "Flight Path Marker",
+  "reticle.options.heading": "Heading Tape",
+  "reticle.options.target_boxes": "Target Boxes",
+  "reticle.options.pull_up_warning": "Pull-Up Warning",
+  "reticle.options.target_range": "Target Range",
+  "reticle.options.target_range.tooltip": "Maximum distance, in blocks, to highlight entities.",
+  "reticle.options.pull_up_seconds": "Pull-Up Warning Time",
+  "reticle.options.pull_up_seconds.tooltip": "Flash a warning this many seconds before you'd hit the ground.",
+  "reticle.options.alpha": "Alpha",
+  "reticle.options.red": "Red",
+  "reticle.options.green": "Green",
+  "reticle.options.blue": "Blue",
+  "reticle.options.color.tooltip": "Primary HUD color.",
+  "reticle.options.reset": "Reset to Defaults"
+}
