@@ -75,7 +75,8 @@ class ProjectMetadataTest {
                 .filter(Files::exists)
                 .flatMap(ProjectMetadataTest::walk)) {
             files.filter(Files::isRegularFile)
-                    .filter(file -> !file.toString().endsWith(".png") && !file.toString().endsWith(".jar"))
+                    .filter(file -> !file.toString().endsWith(".png") && !file.toString().endsWith(".jar")
+                            && !file.toString().endsWith(".ogg"))
                     .forEach(file -> {
                 String text;
                 try {

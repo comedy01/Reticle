@@ -12,13 +12,11 @@ public record FlightReading(
         double flightPathYawOffset,
         double flightPathPitchOffset,
         boolean pullUpWarning) {
-
     public static FlightReading of(
             double velX, double velY, double velZ,
             double lookYawDeg, double lookPitchDeg,
             double posY, double groundDistance,
             double pullUpThresholdSeconds) {
-
         double horizontalSpeed = FlightPolicy.horizontalSpeed(velX, velZ);
         double verticalSpeed = FlightPolicy.verticalSpeed(velY);
         double totalSpeed = FlightPolicy.totalSpeed(velX, velY, velZ);

@@ -1,13 +1,28 @@
 package dev.reticle.hud;
 
-/**
- * Maps an angular offset from the camera's look direction to a HUD pixel offset,
- * as a pinhole-camera projection driven by the current field of view. Used for both
- * the flight-path marker and target boxes so they line up with what's on screen
- * without touching the render pipeline's projection matrices directly.
- */
 public final class Projection {
+    private static final double NEAR = 0.05D;
+
     private Projection() {
+    }
+
+    public record ScreenOffset(double x, double y) {
+    }
+
+    public static ScreenOffset project(double tx, double ty, double tz,
+            double fx, double fy, double fz,
+            double ux, double uy, double uz,
+            double lx, double ly, double lz,
+            double tanHalfFovY, double aspect, double halfWidth, double halfHeight) {
+        double forward = tx * fx + ty * fy + tz * fz;
+        if (forward < NEAR) {
+            return null;
+        }
+        double right = -(tx * lx + ty * ly + tz * lz);
+        double up = tx * ux + ty * uy + tz * uz;
+        double x = right / (forward * tanHalfFovY * aspect) * halfWidth;
+        double y = -up / (forward * tanHalfFovY) * halfHeight;
+        return new ScreenOffset(x, y);
     }
 
     public static double angularToPixels(double angularOffsetDegrees, double halfFovDegrees, double halfExtentPixels) {

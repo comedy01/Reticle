@@ -1,0 +1,20 @@
+{
+  "pull_up": {
+    "category": "master",
+    "sounds": [
+      "reticle:pull_up"
+    ]
+  },
+  "lock_on": {
+    "category": "master",
+    "sounds": [
+      "reticle:lock_on"
+    ]
+  },
+  "hud_on": {
+    "category": "master",
+    "sounds": [
+      "reticle:hud_on"
+    ]
+  }
+}

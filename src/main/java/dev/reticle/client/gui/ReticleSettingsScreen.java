@@ -50,6 +50,22 @@ public final class ReticleSettingsScreen extends OptionsSubScreen {
                 toggleButton("reticle.options.pull_up_warning", null,
                         config::showPullUpWarning, config::setShowPullUpWarning)));
 
+        list.addSmall(List.of(
+                toggleButton("reticle.options.pitch_ladder", null,
+                        config::showPitchLadder, config::setShowPitchLadder),
+                toggleButton("reticle.options.visor", null,
+                        config::showVisor, config::setShowVisor)));
+
+        list.addSmall(List.of(
+                toggleButton("reticle.options.hide_crosshair", null,
+                        config::hideVanillaCrosshair, config::setHideVanillaCrosshair),
+                toggleButton("reticle.options.sounds", null,
+                        config::soundsEnabled, config::setSoundsEnabled)));
+
+        list.addSmall(List.of(
+                toggleButton("reticle.options.night_vision", "reticle.options.night_vision.tooltip",
+                        config::showNightVision, config::setShowNightVision)));
+
         AbstractWidget rangeSlider = new StepSlider(
                 "reticle.options.target_range", "reticle.options.target_range.tooltip",
                 ReticlePolicy.MIN_TARGET_RANGE, ReticlePolicy.MAX_TARGET_RANGE, 1.0,
@@ -142,7 +158,6 @@ public final class ReticleSettingsScreen extends OptionsSubScreen {
                 double initial,
                 DoubleFunction<String> format,
                 DoubleConsumer onChange) {
-
             super(0, 0, WIDTH, HEIGHT, Component.empty(), 0.0);
             this.captionKey = captionKey;
             this.min = min;

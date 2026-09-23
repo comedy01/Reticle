@@ -8,7 +8,6 @@ import dev.reticle.geometry.Angles;
 import org.junit.jupiter.api.Test;
 
 class FlightInstrumentsTest {
-
     @Test
     void horizontalSpeedConvertsTicksToSeconds() {
         assertEquals(20.0, FlightPolicy.horizontalSpeed(1.0, 0.0), 1.0E-9);
@@ -31,8 +30,8 @@ class FlightInstrumentsTest {
 
     @Test
     void yawOfDirectionMatchesKnownDirections() {
-        assertEquals(0.0, Angles.yawOfDirection(0.0, 1.0), 1.0E-9);   // +Z is south, yaw 0
-        assertEquals(90.0, Angles.yawOfDirection(-1.0, 0.0), 1.0E-9); // -X is west, yaw 90
+        assertEquals(0.0, Angles.yawOfDirection(0.0, 1.0), 1.0E-9);
+        assertEquals(90.0, Angles.yawOfDirection(-1.0, 0.0), 1.0E-9);
     }
 
     @Test

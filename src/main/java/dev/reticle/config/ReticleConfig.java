@@ -39,6 +39,21 @@ public final class ReticleConfig {
     @SerializedName("showPullUpWarning")
     private boolean showPullUpWarning = ReticlePolicy.DEFAULT_SHOW_PULL_UP_WARNING;
 
+    @SerializedName("showPitchLadder")
+    private boolean showPitchLadder = ReticlePolicy.DEFAULT_SHOW_PITCH_LADDER;
+
+    @SerializedName("showVisor")
+    private boolean showVisor = ReticlePolicy.DEFAULT_SHOW_VISOR;
+
+    @SerializedName("hideVanillaCrosshair")
+    private boolean hideVanillaCrosshair = ReticlePolicy.DEFAULT_HIDE_VANILLA_CROSSHAIR;
+
+    @SerializedName("soundsEnabled")
+    private boolean soundsEnabled = ReticlePolicy.DEFAULT_SOUNDS_ENABLED;
+
+    @SerializedName("showNightVision")
+    private boolean showNightVision = ReticlePolicy.DEFAULT_SHOW_NIGHT_VISION;
+
     @SerializedName("primaryColor")
     private int primaryColor = ReticlePolicy.DEFAULT_PRIMARY_COLOR;
 
@@ -105,6 +120,46 @@ public final class ReticleConfig {
         showPullUpWarning = value;
     }
 
+    public boolean showPitchLadder() {
+        return showPitchLadder;
+    }
+
+    public void setShowPitchLadder(boolean value) {
+        showPitchLadder = value;
+    }
+
+    public boolean showVisor() {
+        return showVisor;
+    }
+
+    public void setShowVisor(boolean value) {
+        showVisor = value;
+    }
+
+    public boolean hideVanillaCrosshair() {
+        return hideVanillaCrosshair;
+    }
+
+    public void setHideVanillaCrosshair(boolean value) {
+        hideVanillaCrosshair = value;
+    }
+
+    public boolean soundsEnabled() {
+        return soundsEnabled;
+    }
+
+    public void setSoundsEnabled(boolean value) {
+        soundsEnabled = value;
+    }
+
+    public boolean showNightVision() {
+        return showNightVision;
+    }
+
+    public void setShowNightVision(boolean value) {
+        showNightVision = value;
+    }
+
     public int primaryColor() {
         return primaryColor;
     }
@@ -160,6 +215,11 @@ public final class ReticleConfig {
         showHeading = ReticlePolicy.DEFAULT_SHOW_HEADING;
         showTargetBoxes = ReticlePolicy.DEFAULT_SHOW_TARGET_BOXES;
         showPullUpWarning = ReticlePolicy.DEFAULT_SHOW_PULL_UP_WARNING;
+        showPitchLadder = ReticlePolicy.DEFAULT_SHOW_PITCH_LADDER;
+        showVisor = ReticlePolicy.DEFAULT_SHOW_VISOR;
+        hideVanillaCrosshair = ReticlePolicy.DEFAULT_HIDE_VANILLA_CROSSHAIR;
+        soundsEnabled = ReticlePolicy.DEFAULT_SOUNDS_ENABLED;
+        showNightVision = ReticlePolicy.DEFAULT_SHOW_NIGHT_VISION;
         primaryColor = ReticlePolicy.DEFAULT_PRIMARY_COLOR;
         hostileColor = ReticlePolicy.DEFAULT_HOSTILE_COLOR;
         passiveColor = ReticlePolicy.DEFAULT_PASSIVE_COLOR;

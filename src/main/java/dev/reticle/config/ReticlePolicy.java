@@ -7,6 +7,11 @@ public final class ReticlePolicy {
     public static final boolean DEFAULT_SHOW_HEADING = true;
     public static final boolean DEFAULT_SHOW_TARGET_BOXES = true;
     public static final boolean DEFAULT_SHOW_PULL_UP_WARNING = true;
+    public static final boolean DEFAULT_SHOW_PITCH_LADDER = true;
+    public static final boolean DEFAULT_SHOW_VISOR = true;
+    public static final boolean DEFAULT_HIDE_VANILLA_CROSSHAIR = true;
+    public static final boolean DEFAULT_SOUNDS_ENABLED = true;
+    public static final boolean DEFAULT_SHOW_NIGHT_VISION = true;
 
     public static final int DEFAULT_PRIMARY_COLOR = 0xFF39FF14;
     public static final int DEFAULT_HOSTILE_COLOR = 0xFFFF3B30;
