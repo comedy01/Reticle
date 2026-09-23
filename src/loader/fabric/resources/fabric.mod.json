@@ -4,6 +4,7 @@
 	"version": "${version}",
 	"name": "Reticle",
 	"description": "A fighter-jet style heads-up display for elytra flight: flight instruments, a flight-path marker, and line-of-sight target boxes on nearby entities. Client-side only.",
+	"icon": "assets/reticle/icon.png",
 	"authors": [
 		"comedy01"
 	],
