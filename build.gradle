@@ -13,6 +13,7 @@ def versionProps = new Properties()
 def propsFile = neoforge ? file("versions/neoforge/${minecraftVersion}.properties") : file("versions/${minecraftVersion}.properties")
 propsFile.withInputStream { versionProps.load(it) }
 
+def gameVersion = versionProps.getProperty("minecraft", minecraftVersion)
 def packs = versionProps.getProperty("packs").split(",")
 def label = versionProps.getProperty("label")
 def javaVersion = versionProps.getProperty("java").toInteger()
@@ -60,13 +61,13 @@ dependencies {
 		testImplementation "com.google.code.gson:gson:2.11.0"
 		testImplementation "org.slf4j:slf4j-api:2.0.16"
 	} else if (remap) {
-		minecraft "com.mojang:minecraft:${minecraftVersion}"
+		minecraft "com.mojang:minecraft:${gameVersion}"
 		mappings loom.officialMojangMappings()
 		modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 		modImplementation "net.fabricmc.fabric-api:fabric-api:${versionProps.getProperty('fabric_api_version')}"
 		modCompileOnly "com.terraformersmc:modmenu:${versionProps.getProperty('modmenu_version')}"
 	} else {
-		minecraft "com.mojang:minecraft:${minecraftVersion}"
+		minecraft "com.mojang:minecraft:${gameVersion}"
 		implementation "net.fabricmc:fabric-loader:${project.loader_version}"
 		implementation "net.fabricmc.fabric-api:fabric-api:${versionProps.getProperty('fabric_api_version')}"
 		compileOnly "com.terraformersmc:modmenu:${versionProps.getProperty('modmenu_version')}"
